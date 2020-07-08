@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Link, Redirect, useHistory, useLocation } from "react-router-dom";
+import { Card, Input } from "react-rainbow-components";
 import { useAuth } from "../auth";
 import { useState } from "react";
 
@@ -19,18 +20,26 @@ const Login = () => {
   }
 
   return (
-    <Fragment>
+    <Card className="login-page">
       <form onSubmit={onSubmit}>
-        <label>Login</label>
-        <input
+        <h1>Login</h1>
+        <Input
+          label="Email"
+          required
           className="login-username"
-          placeholder="Enter the email address"
+          style={{ padding: "20px", paddingLeft: "0" }}
         />
-        <input className="login-pasword" placeholder="Enter the password" />
+        <Input
+          label="Enter the password"
+          required
+          type="password"
+          className="login-password"
+          style={{ padding: "20px", paddingLeft: "0" }}
+        />
         <button type="submit">Login</button>
       </form>
       <Link to="/signup">Don't have an account</Link>
-    </Fragment>
+    </Card>
   );
 };
 
