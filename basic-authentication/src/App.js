@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Switch, Route, BrowserRouter as Router, Link } from "react-router-dom";
+import { Button } from "react-rainbow-components";
 import {
   HomePage,
   About,
@@ -10,62 +11,63 @@ import {
   Signup,
 } from "./pages";
 import PrivateRoute from "./PrivateRoute";
+import { TopNavBar } from "./components";
 import { authContext as AuthContext } from "./auth";
 import "./App.css";
 
 function App() {
-  const existingTokens = localStorage.getItem("tokens");
+  const existingTokens = localStorage.getItem("id");
   const [authTokens, setAuthTokens] = useState(existingTokens);
 
   const setTokens = (data) => {
-    localStorage.setItem("tokens", JSON.stringify(data));
+    localStorage.setItem("id", JSON.stringify(data));
     setAuthTokens(data);
   };
 
   return (
     <AuthContext.Provider value={{ authTokens, setTokens }}>
       <Router>
-        <div>
-          <ul>
-            <li>
+        <TopNavBar>
+          <div className="tabs">
+            <Button className="tab-element">
               <Link to="/home">Home</Link>
-            </li>
-            <li>
+            </Button>
+            <Button className="tab-element">
               <Link to="/about">About</Link>
-            </li>
-            <li>
+            </Button>
+            <Button className="tab-element">
               <Link to="/articles">Articles</Link>
-            </li>
-          </ul>
-          <Switch>
-            <PrivateRoute exact path="/protected">
-              <ProtectedPage />
-            </PrivateRoute>
-            <PrivateRoute exact path="/home">
-              <HomePage />
-            </PrivateRoute>
-            <Route path="/about">
-              <About />
-            </Route>
-            <PrivateRoute path="/articles">
-              <Articles>
-                <Article id={1} />
-                <Article id={2} />
-                <Article id={3} />
-                <Article id={4} />
-              </Articles>
-            </PrivateRoute>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/signup">
-              <Signup />
-            </Route>
-            <Route path="/">
-              <Login />
-            </Route>
-          </Switch>
-        </div>
+            </Button>
+          </div>
+        </TopNavBar>
+        <Switch>
+          <PrivateRoute exact path="/protected">
+            <ProtectedPage />
+          </PrivateRoute>
+          <PrivateRoute exact path="/home">
+            <HomePage />
+          </PrivateRoute>
+          <Route path="/about">
+            <About />
+          </Route>
+          <PrivateRoute path="/articles">
+            <Articles>
+              <Article id={1} key='article-1'/>
+              <Article id={2} key='article-2'/>
+              <Article id={3} key='article-3'/>
+              <Article id={4} key='article-4'/>
+            </Articles>
+          </PrivateRoute>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/">
+            <Login />
+          </Route>
+        </Switch>
       </Router>
     </AuthContext.Provider>
   );

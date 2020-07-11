@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": {
+        "firstName": "Ram",
+        "lastName": "Mohan"
+      },
+      "userName": "mohanram",
+      "password": "veryHardPassword",
+      "email": "mohan.ram@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": {
+        "firstName": "Trevor",
+        "lastName": "Scott"
+      },
+      "userName": "scotty",
+      "password": "youCantImagine!!",
+      "email": "scottree@hotmail.com"
+    },
+    {
+      "id": 3,
+      "name": {
+        "firstName": "Rustov",
+        "lastName": "Gregyarkov"
+      },
+      "userName": "theRussianGuy",
+      "password": "verySimple123",
+      "email": "rustov1181@ul.com"
+    },
+    {
+      "name": {
+        "firstName": "Tammy",
+        "lastName": "Sammy"
+      },
+      "userName": "samtam",
+      "password": "bahutHard!",
+      "id": 4,
+      "email": "sammygammy@email.com"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1,
+      "userId": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,8 +1,7 @@
 import React, { Fragment } from "react";
 import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
-import Logout from "./Logout";
 
-const ArticlesPage = ({ children, ...rest }) => {
+const ArticlesPage = ({ children }) => {
   const { url, path } = useRouteMatch();
   return (
     <Fragment>
@@ -20,7 +19,6 @@ const ArticlesPage = ({ children, ...rest }) => {
           </Route>
         ))}
       </Switch>
-      <Logout />
     </Fragment>
   );
 };

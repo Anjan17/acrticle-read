@@ -8,7 +8,7 @@ const PrivateRouter = ({ children, ...rest }) => {
     <Route
       {...rest}
       render={() => {
-        return authTokens && authTokens.length ? (
+        return authTokens ? (
           children
         ) : (
           <Redirect to="/" />

@@ -1,0 +1,30 @@
+.page {
+  padding: 30px;
+  margin: 5% 10%;
+  text-align: center;
+}
+
+.login-do-not-have-account {
+  margin: 20px;
+}
+
+.tabs {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.tabs .tab-element {
+  margin: 5px;
+}
+
+.signup-btn {
+  margin: 20px;
+}
+
+.already-have-account-link {
+  margin: 20px;
+}
+
+.text-input {
+  padding: 10px;
+}

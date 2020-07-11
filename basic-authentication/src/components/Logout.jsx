@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
+import classnames from "classnames";
+import { Button } from "react-rainbow-components";
 import { useAuth } from "../auth";
 
 const Logout = () => {
@@ -17,9 +19,12 @@ const Logout = () => {
   }
 
   return (
-    <button className="logout-button" onClick={onClick}>
-      Logout
-    </button>
+    <Button
+      variant="outline-brand"
+      className={classnames("rainbow-m-around_medium", "logout-button")}
+      label="Logout"
+      onClick={onClick}
+    />
   );
 };
 
