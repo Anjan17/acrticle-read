@@ -23,6 +23,9 @@ function App() {
     if (data) {
       localStorage.setItem("id", data);
       setAuthTokens(data);
+    } else {
+      localStorage.removeItem("id");
+      setAuthTokens();
     }
   };
 

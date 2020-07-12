@@ -2,6 +2,7 @@
   padding: 30px;
   margin: 5% 10%;
   text-align: center;
+  background-color: beige;
 }
 
 .login-do-not-have-account {
@@ -9,8 +10,7 @@
 }
 
 .tabs {
-  padding-top: 20px;
-  padding-left: 20px;
+  padding: 10px;
 }
 
 .tabs .tab-element {
@@ -21,10 +21,25 @@
   margin: 20px;
 }
 
+.logout-button {
+  height: 43px;
+  margin: 15px;
+  bottom: 70px;
+  right: 25px;
+  float: right;
+}
+
 .already-have-account-link {
   margin: 20px;
 }
 
 .text-input {
   padding: 10px;
+}
+
+.top-nav-bar {
+  padding: 20px;
+  width: 100%;
+  border: 1px solid;
+  background: beige;
 }

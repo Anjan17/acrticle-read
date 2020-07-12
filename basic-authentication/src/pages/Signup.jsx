@@ -13,7 +13,8 @@ const Signup = () => {
   const [users, setUsers] = useState([]);
   const { authTokens, setTokens } = useAuth();
 
-  const onSubmit = async () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
     const doesUserExistAlready = users.find((user) => user.email === email);
     console.log("onSubmit called");
     if (!doesUserExistAlready) {
@@ -23,7 +24,7 @@ const Signup = () => {
           firstName,
           lastName: lastName[0] || "",
         },
-        username: firstName,
+        userName: firstName,
         password,
         email,
       };
@@ -73,9 +74,9 @@ const Signup = () => {
     fetchUsers();
   }, []);
 
-  // if (authTokens) {
-  //   return <Redirect to="/" />;
-  // }
+  if (authTokens) {
+    return <Redirect to="/home" />;
+  }
   return (
     <Page className="signup-page">
       <h1>Sign Up</h1>
