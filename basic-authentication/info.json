@@ -39,6 +39,88 @@
       "password": "bahutHard!",
       "id": 4,
       "email": "sammygammy@email.com"
+    },
+    {
+      "name": {
+        "firstName": "Anjan",
+        "lastName": []
+      },
+      "username": "Anjan",
+      "password": "123",
+      "email": "anjan.random@email.com",
+      "id": 5
+    },
+    {
+      "name": {
+        "firstName": "Swati",
+        "lastName": []
+      },
+      "username": "Swati",
+      "password": "12345",
+      "email": "swats@randomemail.com",
+      "id": 6
+    },
+    {
+      "name": {
+        "firstName": "AnjanKumar",
+        "lastName": []
+      },
+      "username": "AnjanKumar",
+      "password": "123",
+      "email": "akb123@email.com",
+      "id": 7
+    },
+    {
+      "name": {
+        "firstName": "Parthib",
+        "lastName": []
+      },
+      "username": "Parthib",
+      "password": "12345",
+      "email": "parthibc@gmail.com",
+      "id": 8
+    },
+    {
+      "name": {
+        "firstName": "Anirudh",
+        "lastName": []
+      },
+      "username": "Anirudh",
+      "password": "1234",
+      "email": "ani.funny@gmail.com",
+      "id": 9
+    },
+    {
+      "name": {
+        "firstName": "Smriti",
+        "lastName": []
+      },
+      "username": "Smriti",
+      "password": "123",
+      "email": "smriti@gmail.com",
+      "id": 10
+    },
+    {
+      "name": {
+        "firstName": "Arshad",
+        "lastName": [
+          "Varshi"
+        ]
+      },
+      "username": "Arshad",
+      "password": "1234",
+      "email": "avarsh@email.com",
+      "id": 11
+    },
+    {
+      "name": {
+        "firstName": "Sailash",
+        "lastName": "Patra"
+      },
+      "username": "Sailash",
+      "password": "1234",
+      "email": "patra.sailash@email.com",
+      "id": 12
     }
   ],
   "articles": [

@@ -20,8 +20,10 @@ function App() {
   const [authTokens, setAuthTokens] = useState(existingTokens);
 
   const setTokens = (data) => {
-    localStorage.setItem("id", JSON.stringify(data));
-    setAuthTokens(data);
+    if (data) {
+      localStorage.setItem("id", data);
+      setAuthTokens(data);
+    }
   };
 
   return (
@@ -52,10 +54,10 @@ function App() {
           </Route>
           <PrivateRoute path="/articles">
             <Articles>
-              <Article id={1} key='article-1'/>
-              <Article id={2} key='article-2'/>
-              <Article id={3} key='article-3'/>
-              <Article id={4} key='article-4'/>
+              <Article id={1} key="article-1" />
+              <Article id={2} key="article-2" />
+              <Article id={3} key="article-3" />
+              <Article id={4} key="article-4" />
             </Articles>
           </PrivateRoute>
           <Route path="/login">
