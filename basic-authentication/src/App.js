@@ -11,7 +11,7 @@ import {
   Signup,
 } from "./pages";
 import PrivateRoute from "./PrivateRoute";
-import { TopNavBar } from "./components";
+import { TopNavBar } from "./common-components";
 import { authContext as AuthContext } from "./auth";
 import "./App.css";
 
@@ -46,9 +46,12 @@ function App() {
           </div>
         </TopNavBar>
         <Switch>
-          <PrivateRoute exact path="/protected">
-            <ProtectedPage />
-          </PrivateRoute>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
           <PrivateRoute exact path="/home">
             <HomePage />
           </PrivateRoute>
@@ -61,12 +64,6 @@ function App() {
           <PrivateRoute path="/articles">
             <Articles />
           </PrivateRoute>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
           <Route path="/">
             <Login />
           </Route>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Input, Button } from "react-rainbow-components";
-import Page from "../components/Page";
+import { Page } from "../common-components";
 // import axios from "axios";
 import { useAuth } from "../auth";
 

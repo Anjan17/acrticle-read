@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { Page } from "../components";
+import React from "react";
+import { Page } from "../common-components";
 
 const HomePage = () => {
   return (

@@ -10,8 +10,8 @@ const Logout = () => {
   const onClick = () => {
     // remove all the tokens
     // redirect to login page
-    setTokens(null);
     setUserLogout(true);
+    setTokens(null);
   };
 
   if (userLoggedOut) {
