@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
+import { Page } from "../components";
 
 const HomePage = () => {
   return (
-    <Fragment>
+    <Page>
       <div>This is the Home Page</div>
-    </Fragment>
+    </Page>
   );
 };
 

@@ -16,7 +16,6 @@ const Signup = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     const doesUserExistAlready = users.find((user) => user.email === email);
-    console.log("onSubmit called");
     if (!doesUserExistAlready) {
       const [firstName, ...lastName] = name.split(" ");
       const userPayload = {
@@ -38,7 +37,6 @@ const Signup = () => {
           body: JSON.stringify(userPayload),
         });
         const data = await response.json();
-        console.log(data);
         if (data.id) {
           setTokens(data.id);
           // setUserSignUp(true);
@@ -64,7 +62,6 @@ const Signup = () => {
       try {
         const res = await fetch(`http://localhost:3000/users`);
         const data = await res.json();
-        console.log(data);
         setUsers(data);
       } catch (e) {
         console.log(e);

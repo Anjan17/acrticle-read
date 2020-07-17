@@ -1,8 +1,18 @@
+.sc-brqgnP {
+  border: 1px solid;
+}
 .page {
   padding: 30px;
   margin: 5% 10%;
-  text-align: center;
   background-color: beige;
+  max-height: 620px;
+  overflow: auto;
+}
+
+.login-page,
+.signup-page {
+  margin: 5% 30%;
+  text-align: center;
 }
 
 .login-do-not-have-account {
@@ -24,7 +34,6 @@
 .logout-button {
   height: 43px;
   margin: 15px;
-  bottom: 70px;
   right: 25px;
   float: right;
 }
@@ -38,8 +47,54 @@
 }
 
 .top-nav-bar {
-  padding: 20px;
+  padding: 5px;
   width: 100%;
   border: 1px solid;
   background: beige;
+  display: flex;
+}
+
+.articles .article-item {
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.articles .article-item:hover {
+  background-color: aliceblue;
+}
+
+.articles .articles-content {
+  margin: 20px;
+  padding: 15px;
+  padding-top: 60px;
+}
+
+.articles .articles-header {
+  position: fixed;
+  background-color: beige;
+  width: 75%;
+  top: 17%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.articles .articles-header .article-header--search {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.logout-content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+.logout-content .logged-in-as-text {
+  padding-right: 30px;
 }

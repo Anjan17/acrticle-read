@@ -5,7 +5,7 @@ import {
   HomePage,
   About,
   Articles,
-  Article,
+  ArticleDetail,
   ProtectedPage,
   Login,
   Signup,
@@ -16,15 +16,15 @@ import { authContext as AuthContext } from "./auth";
 import "./App.css";
 
 function App() {
-  const existingTokens = localStorage.getItem("id");
-  const [authTokens, setAuthTokens] = useState(existingTokens);
+  const existingTokens = localStorage.getItem("user");
+  const [authTokens, setAuthTokens] = useState(JSON.parse(existingTokens));
 
   const setTokens = (data) => {
     if (data) {
-      localStorage.setItem("id", data);
+      localStorage.setItem("user", JSON.stringify(data));
       setAuthTokens(data);
     } else {
-      localStorage.removeItem("id");
+      localStorage.removeItem("user");
       setAuthTokens();
     }
   };
@@ -34,13 +34,13 @@ function App() {
       <Router>
         <TopNavBar>
           <div className="tabs">
-            <Button className="tab-element">
+            <Button className="tab-element" variant="border">
               <Link to="/home">Home</Link>
             </Button>
-            <Button className="tab-element">
+            <Button className="tab-element" variant="border">
               <Link to="/about">About</Link>
             </Button>
-            <Button className="tab-element">
+            <Button className="tab-element" variant="border">
               <Link to="/articles">Articles</Link>
             </Button>
           </div>
@@ -55,13 +55,11 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
+          <PrivateRoute path="/articles/:id">
+            <ArticleDetail />
+          </PrivateRoute>
           <PrivateRoute path="/articles">
-            <Articles>
-              <Article id={1} key="article-1" />
-              <Article id={2} key="article-2" />
-              <Article id={3} key="article-3" />
-              <Article id={4} key="article-4" />
-            </Articles>
+            <Articles />
           </PrivateRoute>
           <Route path="/login">
             <Login />

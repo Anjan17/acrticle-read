@@ -6,7 +6,7 @@ import { useAuth } from "../auth";
 import { useState } from "react";
 
 const Login = () => {
-  const { setTokens } = useAuth();
+  const { setTokens, authTokens } = useAuth();
   const [users, setUsers] = useState([]);
   const [loginName, setLoginName] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
@@ -15,13 +15,13 @@ const Login = () => {
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/" } };
 
-  const onSubmit = () => {
-    console.log("onSubmit called")
+  const onSubmit = (e) => {
+    e.preventDefault();
     const findUser = users.find(
       (user) => user.userName === loginName && user.password === loginPassword
     );
     if (findUser && findUser.id) {
-      setTokens(findUser.id);
+      setTokens(findUser);
       setUserLogin(true);
     } else {
       alert("invalid username or password");
@@ -40,7 +40,7 @@ const Login = () => {
     fetchUsers();
   }, []);
 
-  if (isUserLoggedIn) {
+  if (isUserLoggedIn || (authTokens && authTokens.id)) {
     return <Redirect to="/home" />;
   }
 
