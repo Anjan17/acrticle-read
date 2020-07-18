@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { Page } from "../common-components";
+import { Page } from "../../common-components";
 
 const ArticleDetail = () => {
   const [articleData, setArticleData] = useState({});

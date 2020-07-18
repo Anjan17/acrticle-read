@@ -73,19 +73,20 @@
 }
 
 .articles .articles-header {
-  position: fixed;
-  background-color: beige;
-  width: 75%;
-  top: 17%;
+  padding-left: 40px;
   display: flex;
-  justify-content: space-around;
-  padding: 20px 0;
+  justify-content: space-evenly;
 }
 
 .articles .articles-header .article-header--search {
   width: 50%;
   display: flex;
   justify-content: center;
+} 
+
+.articles .articles-header #example-select-1 {
+  flex-direction: row;
+  align-items: center;
 }
 
 .logout-content {

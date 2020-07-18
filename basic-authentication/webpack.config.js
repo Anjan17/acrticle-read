@@ -4,7 +4,13 @@ module.exports = (baseConfig, env, defaultConfig) => {
   defaultConfig.module.rules.push(
     {
       test: /\.less$/,
-      loaders: ["style-loader", "css-loader", "less-loader"]
+      loaders: "less-loader",
+      include: path.resolve(__dirname, "node_modules"),
+    },
+    {
+      test: /\.less$/,
+      loaders: "less-loader",
+      include: path.resolve(__dirname, "src"),
     }
   );
   defaultConfig.resolve.extensions.push(".less");

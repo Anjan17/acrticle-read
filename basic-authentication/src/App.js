@@ -6,7 +6,6 @@ import {
   About,
   Articles,
   ArticleDetail,
-  ProtectedPage,
   Login,
   Signup,
 } from "./pages";

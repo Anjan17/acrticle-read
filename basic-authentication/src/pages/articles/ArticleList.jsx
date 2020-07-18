@@ -1,8 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Article } from "./Articles";
+import ArticleItem from "./ArticleItem";
 
-const ArticleList = ({ articles }) => {
+const ArticleList = ({ articles = [], searchText = "" }) => {
   const history = useHistory();
 
   const onClickArticleItem = (id) => {
@@ -12,11 +12,12 @@ const ArticleList = ({ articles }) => {
     <div className="article-list">
       {articles.map(({ id, title }) =>
         id ? (
-          <Article
+          <ArticleItem
             id={id}
             key={id}
             title={title}
             onClick={() => onClickArticleItem(id)}
+            searchText={searchText}
           />
         ) : null
       )}

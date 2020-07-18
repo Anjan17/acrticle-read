@@ -4,9 +4,9 @@ import { useAuth } from "./auth";
 
 const PrivateRouter = ({ children, ...rest }) => {
   const { authTokens } = useAuth();
-  if (!(authTokens && authTokens.id)) {
-    alert("You need to login to view the page");
-  }
+  // if (!(authTokens && authTokens.id)) {
+  //   alert("You need to login to view the page");
+  // }
   return (
     <Route
       {...rest}
