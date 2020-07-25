@@ -1,0 +1,157 @@
+.sc-brqgnP {
+  border: 1px solid;
+}
+.page {
+  padding: 30px;
+  margin: 5% 10%;
+  background-color: beige;
+  max-height: 620px;
+  overflow: auto;
+}
+
+.login-page,
+.signup-page {
+  margin: 5% 30%;
+  text-align: center;
+}
+
+.user-page {
+  display: flex;
+}
+
+.user-page .profile-data {
+  width: 30%;
+}
+
+.user-page .profile-data .username,
+.user-page .profile-data .full-name {
+  display: flex;
+  justify-content: center;
+}
+
+.user-page .profile-data .avatar {
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.user-page .profile-data .avatar .avatar-image {
+  height: 150px;
+}
+
+.login-do-not-have-account {
+  margin: 20px;
+}
+
+.tabs {
+  padding: 10px;
+}
+
+.tabs .tab-element {
+  margin: 5px;
+}
+
+.signup-btn {
+  margin: 20px;
+}
+
+.logout-button {
+  height: 43px;
+  margin: 15px;
+  right: 25px;
+  float: right;
+}
+
+.already-have-account-link {
+  margin: 20px;
+}
+
+.text-input {
+  padding: 10px;
+}
+
+.top-nav-bar {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid;
+  background: beige;
+  display: flex;
+}
+
+.articles .article-item {
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.articles .article-item:hover {
+  background-color: aliceblue;
+}
+
+.articles .articles-content {
+  margin: 20px;
+  padding: 15px;
+  padding-top: 60px;
+}
+.article-content {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.articles .articles-header {
+  padding-left: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.articles .articles-header .article-header--search {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.articles .articles-header #example-select-1 {
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment-list {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.comment-list .comment {
+  padding: 10px 0;
+  height: 60px;
+  border-bottom: 0.5px solid hsla(0, 0%, 43.9%, 0.5);
+}
+
+.comment-list .comment-text {
+  border-bottom: 1px solid;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.comment-list .comment-box {
+  margin: 10px 0;
+}
+
+.comment-list .comment-box #example-textarea-1 {
+  margin: 10px 0;
+}
+.comment-list .comment-button {
+  float: right;
+}
+
+.logout-content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+.logout-content .logged-in-as-text {
+  padding-right: 30px;
+}
