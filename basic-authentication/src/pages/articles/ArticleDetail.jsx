@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { Page } from "../../common-components";
+import { Page, CommentList } from "../../common-components";
 
 const ArticleDetail = () => {
   const [articleData, setArticleData] = useState({});
@@ -27,16 +27,35 @@ const ArticleDetail = () => {
     fetchArticleDetails();
   }, []);
 
-  const { title, body } = articleData;
+  const onSubmitComment = async (comment) => {
+    try {
+      const { comments, ...rest } = articleData;
+      const payload = { ...rest, comments: [...comments, comment] };
+      const response = await fetch(`http://localhost:3000/articles/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json();
+      setArticleData(data);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const { title, body, comments } = articleData;
   return (
     <Page>
       <Link to="/articles">Go back to All Articles</Link>
       <div className="article-content">
         <h3>{`#${id}`}</h3>
         <div className="author-publish">{`Posted by ${authorData.userName}`}</div>
-        <h4>{title}</h4>
-        <div>{body}</div>
+        <h4 className="article-title">{title}</h4>
+        <div className="article-body">{body}</div>
       </div>
+      <CommentList comments={comments} onSubmitComment={onSubmitComment} />
     </Page>
   );
 };

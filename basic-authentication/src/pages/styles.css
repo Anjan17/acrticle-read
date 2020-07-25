@@ -15,6 +15,31 @@
   text-align: center;
 }
 
+.user-page {
+  display: flex;
+}
+
+.user-page .profile-data {
+  width: 30%;
+}
+
+.user-page .profile-data .username,
+.user-page .profile-data .full-name {
+  display: flex;
+  justify-content: center;
+}
+
+.user-page .profile-data .avatar {
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.user-page .profile-data .avatar .avatar-image {
+  height: 150px;
+}
+
 .login-do-not-have-account {
   margin: 20px;
 }
@@ -71,7 +96,10 @@
   padding: 15px;
   padding-top: 60px;
 }
-
+.article-content {
+  padding: 20px;
+  margin-bottom: 20px;
+}
 .articles .articles-header {
   padding-left: 40px;
   display: flex;
@@ -82,11 +110,39 @@
   width: 50%;
   display: flex;
   justify-content: center;
-} 
+}
 
 .articles .articles-header #example-select-1 {
   flex-direction: row;
   align-items: center;
+}
+
+.comment-list {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.comment-list .comment {
+  padding: 10px 0;
+  height: 60px;
+  border-bottom: 0.5px solid hsla(0, 0%, 43.9%, 0.5);
+}
+
+.comment-list .comment-text {
+  border-bottom: 1px solid;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.comment-list .comment-box {
+  margin: 10px 0;
+}
+
+.comment-list .comment-box #example-textarea-1 {
+  margin: 10px 0;
+}
+.comment-list .comment-button {
+  float: right;
 }
 
 .logout-content {

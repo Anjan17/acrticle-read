@@ -59,6 +59,26 @@
       "password": "1234",
       "email": "kunwalra@email.com",
       "id": 6
+    },
+    {
+      "name": {
+        "firstName": "Partha",
+        "lastName": "Sharma"
+      },
+      "userName": "Partha",
+      "password": "parths@123",
+      "email": "sharma.parth@gmail.com",
+      "id": 7
+    },
+    {
+      "name": {
+        "firstName": "Jagjit",
+        "lastName": "Mehra"
+      },
+      "userName": "Jagjit",
+      "password": "jaggy@123",
+      "email": "mehr.jag@gmail.com",
+      "id": 8
     }
   ],
   "articles": [
@@ -67,56 +87,79 @@
       "title": "Happy 1st Birthday, Atomic Habits! (plus 3 gifts for you…)",
       "body": "One year ago today, Atomic Habits was born. The last 12 months have been a wild ride: 1.1 million copies sold worldwide. 12 consecutive months on the New York Times best seller list (currently #3). Repeated appearances on the Audible, Wall Street Journal, and USA Today bestseller lists. Over 20,000 reviews on Audible (4.8/5 stars). Over 1,300 reviews on Amazon (4.9/5 stars). Translated into 40+ languages (browse international editions). 35+ keynote speeches in 13 countries …and so much more.",
       "postId": 1,
-      "userId": 1
+      "userId": 1,
+      "lastModified": "1995/03/21",
+      "comments": []
     },
     {
       "id": 2,
-      "body": "some comment",
+      "body": "The ultimate productivity hack is saying no. Not doing something will always be faster than doing it. This statement reminds me of the old computer programming saying, Remember that there is no code faster than no code. The same philosophy applies in other areas of life. For example, there is no meeting that goes faster than not having a meeting at all. This is not to say you should never attend another meeting, but the truth is that we say yes to many things we don't actually want to do. There are many meetings held that don't need to be held. There is a lot of code written that could be deleted.How often do people ask you to do something and you just reply, “Sure thing.” Three days later, you're overwhelmed by how much is on your to-do list. We become frustrated by our obligations even though we were the ones who said yes to them in the first place.",
       "title": "The Ultimate Productivity Hack is Saying No",
       "postId": 1,
-      "userId": 3
+      "userId": 3,
+      "lastModified": "2000/05/25",
+      "comments": []
     },
     {
       "id": 4,
-      "body": "some comment",
+      "body": "Gabrielle Hamilton, a chef in New York City, provides a good example. During an interview with the New York Times, she said, “The one thing I see that consistently separates the chef from the home cook is that we taste everything, all the time, before we commit it to the dish, right down to the grains of salt. We slurp shot glasses of olive oil and aerate them in our mouths as if it were a wine we were trying to know. We taste the lamb, the fish, the butter, the milk before we use it… we chew salt to see how we like it in our teeth, on our tongues, and to know its flavor, its salinity. However, there is an important difference between getting feedback while cooking a meal and getting feedback while building a habit. When it comes to building a habit, feedback is often delayed. It's easy to taste an ingredient or to watch bread rise in the oven. But it can be difficult to visualize the progress you are making with your habits. Perhaps you've been running for a month, but you still don't see a change in your body. Or maybe you managed to meditate for 16 straight days, but you still feel stressed and anxious at work. Research has shown that people who track their progress on goals like losing weight, quitting smoking, and lowering blood pressure are all more likely to improve than those who don’t. One study of more than sixteen hundred people found that those who kept a daily food log lost twice as much weight as those who did not. A habit tracker is a simple way to log your behavior, and the mere act of tracking a behavior can spark the urge to change it.",
       "title": "The Ultimate Habit Tracker Guide: Why and How to Track Your Habits",
       "postId": 1,
-      "userId": 4
+      "userId": 4,
+      "lastModified": "2019/08/29",
+      "comments": [
+        "The article is good",
+        "<h1>Testing the header</h1>\n"
+      ]
     },
     {
       "id": 10,
-      "body": "some comment",
+      "body": "Dopamine agonists and levodopa are the gold standard agents or the best medical treatment option for PD [10]. Levodopa, dopamine receptor agonists, anticoliergic drugs, monoamine oxidase B inhibitors (MOA B inhibitors), catechol O methyl transferase inhibitors and amandatin are the most frequently used pharmaceutical treatment options [11]. Mesenchymal Stem Cells applications are investigated to create a different treatment method for PD by molecular biologists, tissue and bioengineers [12]. Device supported therapies are also needed in the advance stage of PD. Apomorphine (Apomorphine pump), Levedope and Carbidopa Gel and Deep Brain Stimulation(DBS) therapy are new solutions [13]. Deep Brain Stimulation surgery has been applied first time by a French scientist group from the University of Grenoble (France), led by the neurosurgeon AL Benabid, applied the deep brain stimulation (DBS) technique for the treatment of parkinsonian tremor [14]. DBS has been used successfully to treat various diseases of neurological and psychiatric disorders including Parkinson’s disease, neuropathic pain and dystonia and has shown great promise in treating addiction, Tourette syndrome, obsessive compulsive disorder [15]. In addition, there are also some beneficial clinic outcomes for the resistant hypertension [16]. There are also some undergoing clinical trials with DBS technology in various critical diseases such as; Alzheimer, Schizophrenia and Stroke [17-19].",
       "title": "The Cost Benefit and Effectiveness Anlayze of DBS Therapy on Parkinson’s Disease in Four Different University Hospitals in Turkey",
       "postId": 1,
-      "userId": 6
+      "userId": 6,
+      "lastModified": "2017/09/09",
+      "comments": []
     },
     {
       "id": 21,
-      "body": "some comment",
+      "body": "The 3D Animation and Game Design program at the University of the Incarnate Word requires students to supply complete 3D narrative animations or video games. Although students know this is often coming, the specifics of the way to plan the assembly, and make the precise design and story decisions that provide a successful piece seems to return as a surprise when students are literally within the class. We, therefore, implemented a 1 credit planning course: Senior Thesis Workshop during which students produce no digital assets, but propose  multiple projects with various teams and work them up to a pitch state. Then, still within this course, the scholars do initial concept design andplanning to add the preparation of the upcoming production cycle.During this presentation, we'll show the course structure of theworkshop, and therefore the results created there. We’ll share lessonslearned within the process and the way it's strengthened the output ofthe assembly courses. Modeling is the process of taking a shape andmolding it into a completed 3D mesh. The foremost typical means ofmaking a 3D model is to require an easy object, called a primitive, andextend or “grow” it into a shape that will be refined and detailed.Primitives are often anything from one point (called a vertex), a twodimensional line (an edge), a curve (a spline), to three-dimensionalobjects (faces or polygons). Using the precise features of your chosen 3Dsoftware, all of those primitives are often manipulated to supply anobject. Once you create a model in 3D, you’ll usually learn one method tomake your model, and return thereto time and again once you got tocreate new models. There are three basic methods you'll use to make a3D model, and 3D artists should understand the way to create a modelusing each technique. When a 3D model is made, 2D images are oftenoverlaid thereon to feature colors, designs, and textures. This is oftencalled mapping, and sometimes everything of a model’s color comesfrom this. These maps are often created in programs like Photoshop, andtherefore the illusions of textures are often brushed onto the models aseasily as if you painted them yourself; some animators even use realphotographs of the textures they’re trying to make, simply captured thenaltered to form seamless repeatable patterns. This is often whatpercentage illusions of hair are created; instead of model individualstrands, rather than grouped locks of hair are modeled, before a textureis overlaid with individual strands and details painted on.",
       "title": "Computer Graphics 2017: Production planning workshop for 3D animation â�?�? Matthew Tovar - USA",
       "postId": 1,
-      "userId": 3
+      "userId": 3,
+      "lastModified": "2013/03/13",
+      "comments": [
+        "This is a sample comment",
+        "This is another sample comment",
+        "This is yet another sample comment"
+      ]
     },
     {
       "id": 29,
-      "body": "some comment",
+      "body": "Among professional voice users’ teachers are found to be at an exceptionally high risk of developing voice problems because of stress inherent in their occupation and the environmental conditions in which they work. In this pilot study conducted in the Terai region of Nepal we determine the prevalence of voice disorders in primary level school teachers and aetiological factors associated with it. Out of 137 teachers, 72 had voice disorder accounting prevalence of 52.6%. Tobacco has statistical significance with voice disorder whereas drinking alcohol and using chalk were not associated with it. Our conclusion was majority of teachers afflicted with the problem were female and increasing teaching experience and use of tobacco were the main risk factor.",
       "title": "Prevalence of Voice Disorders in Primary Level School Teachers of Nepal: A Pilot Study",
       "postId": 1,
-      "userId": 5
+      "userId": 5,
+      "lastModified": "2011/07/10",
+      "comments": []
     },
     {
       "id": 32,
-      "body": "some comment",
+      "body": "About a third of cases (30%) had no recurrent chromosomal mutations, suggesting a high degree of heterogeneity and genetic mutation nor clear drivers of CLL [18]. Consistent with a role in disease initiation, global DNA hypo-methylation and shortened telomeres were found to be signiٽcDntl associated early-stage CL patient’s untreated tumors [19]. Similarly, gene methylation CDKN-2A, (INK4a/ARF) locus protein expression can be epigenetically silenced p14 ARF, and stop activity of oncogenes to stabilize p-53 protein response. A body of work using two mouse models has recently provided strong evidence that the aberrant hypo-methylation promotes development LLC. Нus, Hypomethylation of a single aberrant promoter can upregulate several micro RNAs, possibly contributing to tumorigenesis. TET2 the enzyme is an enzyme that plays a central role in DNA demethylation to catalyze the conversion of 5-mC into 5-hydroxymethyl cytosine (5-hmC) [20]. Some recent date studies suggested strong cross-talk between histone modiٽcDtions, translational activity and DNA methylation status of DNMT prior locale [21]. Treatments with meth Dtionspeciٽc agents are used in combination with conventional chemotherapy treatment anti-neoplastic [22]. Nutlings molecules of imidazole analogs and Nutlin-3 moves the MDM2 binding to p53 competing with good response in treatment of CLL with 13-14q translocations [23]. Antibodies speciٽc for p53 and p53 for phosphorylated at three diوٴerent sites in the ٽeld of activation were used in parallel analyses in investigations of CLL treatments [24,25].",
       "title": "Signification of Protein P-53 Isoforms in CLL",
       "postId": 1,
-      "userId": 2
+      "userId": 2,
+      "lastModified": "2015/10/21",
+      "comments": []
     },
     {
       "id": 19,
-      "body": "some comment",
+      "body": "Patients with mild-to-moderate asthma exacerbations may present to the emergency department to seek medical care. These patients should be treated as an out-patient when following the recommendation detailed above. Patients with severe or life-threatening asthma should always be managed in the emergency department. A focused, expedited history and physical examination should be carried out in all patients. It is critical to rule out other conditions that may mimic a severe asthma exacerbation, such as pneumonia, congestive heart failure, pneumothorax, and myocardial infarction. In patients with a severe exacerbation, careful attention should be placed on the level of consciousness, oxygen saturation, breathing frequency, resting pulse, and blood pressure, and on the use of accessory respiratory muscles. Patients with severe asthma may have a fast deterioration of their clinical presentation, so continuous monitoring of these patients is warranted. In the advanced stages of an asthma exacerbation, the pulmonary physical examination may reveal a silent chest, which may herald impending respiratory failure. Patients with severe asthma should also be monitored for potential complications of asthma, such as pneumothorax, pneumomediastinum, and anaphylaxis.If possible, and without delaying therapy, all patients should have an objective measure of their lung function because health-care professionals may underestimate or overestimate the severity of the clinical presentation. PEF or FEV1 measurements should be performed every hour to assess the progression of the disease and determine the therapy and the need for hospitalization. An oxygen saturation of <90% indicates the need for intense therapy.1 Arterial blood gas determinations are not indicated in all patients but should be considered in patients with FEV1 < 50% predicted.33 Patients with a PaO2 < 60 mm Hg or an oxygen saturation < 90% should be treated with supplemental oxygen. Although a chest radiograph is not routinely recommended in asthma, it should be obtained in all patients with atypical features and in those who do not respond to initial therapy.",
       "title": "Presence and Treatment of Asthma Exacerbation in Infants and Children",
       "postId": 1,
-      "userId": 4
+      "userId": 4,
+      "lastModified": "2003/01/29",
+      "comments": []
     }
   ]
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route, BrowserRouter as Router, Link } from "react-router-dom";
 import { Button } from "react-rainbow-components";
 import {
@@ -27,6 +27,16 @@ function App() {
       setAuthTokens();
     }
   };
+
+  useEffect(() => {
+    // TODO: To invalidate the user token and clear the local storage of an user details
+    // The below code is written with the intention to make the same work but it isn't working
+
+    // return function clearAllUserData() {
+    //   setTokens(null);
+    //   localStorage.removeItem("user");
+    // };
+  }, []);
 
   return (
     <AuthContext.Provider value={{ authTokens, setTokens }}>

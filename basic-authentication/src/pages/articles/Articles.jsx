@@ -9,11 +9,11 @@ const selectOptions = [
     label: "Alphabetically",
   },
   {
-    value: "Newest to Oldest",
+    value: "newToOld",
     label: "Newest to Oldest",
   },
   {
-    value: "Oldest to Newest",
+    value: "oldToNew",
     label: "Oldest to Newest",
   },
 ];
@@ -26,14 +26,17 @@ const ArticlesPage = () => {
     const getArticles = async () => {
       const response = await fetch("http://localhost:3000/articles");
       const data = await response.json();
-      setArticles(data);
-      setFilteredArticles(data);
+      sortArticles("Alphabetically", data);
     };
     try {
       getArticles();
     } catch (e) {
       console.log(e);
     }
+
+    return () => {
+      console.log("Articles unmounted");
+    };
   }, []);
 
   const changeSearchText = (e) => {
@@ -51,20 +54,42 @@ const ArticlesPage = () => {
   };
 
   const sortArticles = (sortOrder, articles) => {
+    console.log(sortOrder);
+    let sortedArticles = [];
     if (sortOrder === "Alphabetically") {
-      const sortedArticles = articles.sort((item1, item2) => {
+      sortedArticles = articles.sort((item1, item2) => {
         if (item1.title < item2.title) return -1;
         if (item1.title > item2.title) return 1;
         return 0;
       });
-      setArticles(sortedArticles);
-      setFilteredArticles(
-        getFilteredArticles({
-          articles: sortedArticles,
-          searchValue: searchText,
-        })
-      );
     }
+
+    if (sortOrder === "newToOld") {
+      sortedArticles = articles.sort((item1, item2) => {
+        const lastModifiedDuration1 = new Date(item1.lastModified).getTime();
+        const lastModifiedDuration2 = new Date(item2.lastModified).getTime();
+        if (lastModifiedDuration1 < lastModifiedDuration2) return 1;
+        if (lastModifiedDuration1 > lastModifiedDuration2) return -1;
+        return 0;
+      });
+    }
+
+    if (sortOrder === "oldToNew") {
+      sortedArticles = articles.sort((item1, item2) => {
+        const lastModifiedDuration1 = new Date(item1.lastModified).getTime();
+        const lastModifiedDuration2 = new Date(item2.lastModified).getTime();
+        if (lastModifiedDuration1 > lastModifiedDuration2) return 1;
+        if (lastModifiedDuration1 < lastModifiedDuration2) return -1;
+        return 0;
+      });
+    }
+    setArticles(sortedArticles);
+    setFilteredArticles(
+      getFilteredArticles({
+        articles: sortedArticles,
+        searchValue: searchText,
+      })
+    );
   };
 
   return (
@@ -78,7 +103,6 @@ const ArticlesPage = () => {
           value={searchText}
         />
         <Select
-          label="Select Label"
           options={selectOptions}
           id="example-select-1"
           className="rainbow-m-vertical_x-large rainbow-p-horizontal_medium rainbow-m_auto"

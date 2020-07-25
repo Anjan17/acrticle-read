@@ -38,7 +38,7 @@ const Signup = () => {
         });
         const data = await response.json();
         if (data.id) {
-          setTokens(data.id);
+          setTokens(data);
           // setUserSignUp(true);
         }
       } catch (e) {
