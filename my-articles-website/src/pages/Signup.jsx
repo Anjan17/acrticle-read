@@ -88,6 +88,7 @@ const Signup = () => {
         <Input
           label="Email Id"
           className="text-input signup-email-id"
+          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required

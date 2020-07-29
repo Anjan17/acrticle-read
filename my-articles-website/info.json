@@ -159,7 +159,33 @@
       "postId": 1,
       "userId": 4,
       "lastModified": "2003/01/29",
-      "comments": []
+      "comments": [
+        {
+          "text": "This is a comment actually",
+          "id": "f66dba71-93dd-e9a8-53fd-431b10c81617",
+          "author": "mohanram",
+          "replies": [
+            {
+              "text": "This is my first reply getting edited",
+              "author": "mohanram",
+              "id": "0e0711bb-c544-7cea-663e-ba2c490ab71c",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "id": "b5ecb985-b884-7306-156e-e68880490d8b",
+          "text": "This is scotty's edited comments. Yes they are",
+          "author": "scotty",
+          "replies": []
+        },
+        {
+          "id": "6d245d7b-3392-b19b-7962-7a13fb9b7edc",
+          "text": "This is some comment from the same user",
+          "author": "scotty",
+          "replies": []
+        }
+      ]
     }
   ]
 }

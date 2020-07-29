@@ -124,8 +124,14 @@
 
 .comment-list .comment {
   padding: 10px 0;
-  height: 60px;
+  min-height: 60px;
   border-bottom: 0.5px solid hsla(0, 0%, 43.9%, 0.5);
+  position: relative;
+}
+
+.comment-list .comment .subtitle {
+  font-size: 13px;
+  display: flex;
 }
 
 .comment-list .comment-text {
