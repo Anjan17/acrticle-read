@@ -75,12 +75,7 @@ const Login = () => {
           value={loginPassword}
           onChange={setTheLoginPassword}
         />
-        <Button
-          label="Login"
-          variant="outline-brand"
-          className="rainbow-m-around_medium"
-          type="submit"
-        />
+        <Button label="Login" type="submit" />
       </form>
       <div className="login-do-not-have-account">
         <Link to="/signup">Don't have an account</Link>

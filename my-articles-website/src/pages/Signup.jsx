@@ -12,9 +12,11 @@ const Signup = () => {
   const [retypePassword, setRetypePassword] = useState("");
   const [users, setUsers] = useState([]);
   const { authTokens, setTokens } = useAuth();
+  const [submitButtonDisable, setSubmitButtonDisable] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setSubmitButtonDisable(true);
     const doesUserExistAlready = users.find((user) => user.email === email);
     if (!doesUserExistAlready) {
       const [firstName, ...lastName] = name.split(" ");
@@ -84,6 +86,7 @@ const Signup = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          autoFocus
         />
         <Input
           label="Email Id"
@@ -112,7 +115,12 @@ const Signup = () => {
           onChange={retypePasswordHander}
           required
         />
-        <Button type="submit" className="signup-btn" label="Sign Up !" />
+        <Button
+          type="submit"
+          className="signup-btn"
+          label="Sign Up !"
+          disabled={submitButtonDisable}
+        />
       </form>
       <div className="already-have-account-link">
         <Link to="/login">Already have an account</Link>

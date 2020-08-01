@@ -39,35 +39,53 @@ const ArticleDetail = () => {
     };
   };
 
-  const exploreComment = (currentComment, comment) => {
-    let updatedComment =
-      currentComment.id === comment.id
-        ? { ...currentComment, ...comment }
-        : { ...currentComment };
+  const exploreComment = (currentComment, commentToUpdate, replyComment) => {
+    let updatedComment = {};
+    if (currentComment.id === commentToUpdate.id) {
+      if (replyComment) {
+        const { replies, ...rest } = commentToUpdate;
+        return { ...rest, replies: [...replies, replyComment] };
+      }
+      updatedComment = { ...commentToUpdate };
+      return updatedComment;
+    }
+    updatedComment = currentComment;
     let updatedReplies = [];
     const { replies } = updatedComment;
     if (replies.length) {
-      updatedReplies = replies.map((reply) => exploreComment(reply, comment));
+      updatedReplies = replies.map((reply) =>
+        exploreComment(reply, commentToUpdate, replyComment)
+      );
       return { ...updatedComment, replies: updatedReplies };
     }
     return updatedComment;
   };
 
-  const getUpdatedComments = (comments, comment) => {
+  const getUpdatedComments = (comments, commentToUpdate, replyComment) => {
     const updatedComments = comments.map((currentComment) =>
-      exploreComment(currentComment, comment)
+      exploreComment(currentComment, commentToUpdate, replyComment)
     );
     return updatedComments;
   };
 
-  const onSubmitComment = async (commentText) => {
+  const onSubmitComment = async (commentText, parentComment) => {
     try {
+      let payload = {};
       const updatedCommentWithID = getCommentPayload(commentText);
       const { comments, ...rest } = articleData;
-      const payload = {
-        ...rest,
-        comments: [...comments, updatedCommentWithID],
-      };
+      if (!parentComment) {
+        payload = {
+          ...rest,
+          comments: [...comments, updatedCommentWithID],
+        };
+      } else {
+        const updatedComments = getUpdatedComments(
+          comments,
+          parentComment,
+          updatedCommentWithID
+        );
+        payload = { ...rest, comments: updatedComments };
+      }
       const response = await fetch(`http://localhost:3000/articles/${id}`, {
         method: "PUT",
         headers: {
@@ -90,8 +108,6 @@ const ArticleDetail = () => {
 
   const updateFinalComments = async (commentsUpdated) => {
     try {
-      // const updatedCommentWithID = getCommentPayload(commentText);
-      console.log(commentsUpdated);
       const { comments, ...rest } = articleData;
       const payload = {
         ...rest,

@@ -11,6 +11,7 @@ const CommentList = ({ comments = [], onSubmitComment, onUpdateComment }) => {
           comment={comment}
           key={comment.id}
           onUpdateComment={onUpdateComment}
+          onSubmit={onSubmitComment}
         />
       ))}
       <CommentBox onSubmit={onSubmitComment} />

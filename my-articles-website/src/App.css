@@ -45,3 +45,6 @@
   }
 }
 
+input[type="email"]:not(:placeholder-shown):invalid {
+  color: red;
+}

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Textarea, Button } from "react-rainbow-components";
 
-const CommentBox = ({ onSubmit }) => {
+const CommentBox = ({
+  onSubmit,
+  enableCancel = false,
+  onCancelComment = () => {},
+}) => {
   const [comment, setComment] = useState("");
 
   const onChangeText = (e) => {
@@ -30,6 +34,13 @@ const CommentBox = ({ onSubmit }) => {
         disabled={!comment.length}
         onClick={handleCommentSubmit}
       />
+      {enableCancel && (
+        <Button
+          className="comment-button"
+          label="Cancel"
+          onClick={onCancelComment}
+        />
+      )}
     </div>
   );
 };

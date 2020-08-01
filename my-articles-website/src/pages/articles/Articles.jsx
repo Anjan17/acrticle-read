@@ -33,10 +33,6 @@ const ArticlesPage = () => {
     } catch (e) {
       console.log(e);
     }
-
-    return () => {
-      console.log("Articles unmounted");
-    };
   }, []);
 
   const changeSearchText = (e) => {
@@ -54,7 +50,6 @@ const ArticlesPage = () => {
   };
 
   const sortArticles = (sortOrder, articles) => {
-    console.log(sortOrder);
     let sortedArticles = [];
     if (sortOrder === "Alphabetically") {
       sortedArticles = articles.sort((item1, item2) => {

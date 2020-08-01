@@ -79,6 +79,16 @@
       "password": "jaggy@123",
       "email": "mehr.jag@gmail.com",
       "id": 8
+    },
+    {
+      "name": {
+        "firstName": "Keertika",
+        "lastName": "Rathore"
+      },
+      "userName": "Keertika",
+      "password": "irock@123",
+      "email": "keerat@123.com",
+      "id": 9
     }
   ],
   "articles": [
@@ -150,7 +160,14 @@
       "postId": 1,
       "userId": 2,
       "lastModified": "2015/10/21",
-      "comments": []
+      "comments": [
+        {
+          "id": "d7243604-44bc-f4de-562b-07b49106d98e",
+          "text": "Very interesting article indeed !",
+          "author": "scotty",
+          "replies": []
+        }
+      ]
     },
     {
       "id": 19,
@@ -161,27 +178,60 @@
       "lastModified": "2003/01/29",
       "comments": [
         {
-          "text": "This is a comment actually",
-          "id": "f66dba71-93dd-e9a8-53fd-431b10c81617",
+          "id": "bd621db3-e677-1bbd-dcfb-0d1a070e7bf2",
+          "text": "This is the 1 comment(edited twice)",
           "author": "mohanram",
           "replies": [
             {
-              "text": "This is my first reply getting edited",
+              "id": "514fa074-2256-9bb4-2852-f7cf7746572c",
+              "text": "This is the first reply (edited)",
               "author": "mohanram",
-              "id": "0e0711bb-c544-7cea-663e-ba2c490ab71c",
-              "replies": []
+              "replies": [
+                {
+                  "id": "97f37de7-610f-e9a5-5008-902d8b737e1f",
+                  "text": "this is the first reply at level 2(edited)",
+                  "author": "mohanram",
+                  "replies": [
+                    {
+                      "id": "b132def8-5d1e-b728-4670-e1c765816292",
+                      "text": "this is the first reply at level 3 (edited)",
+                      "author": "mohanram",
+                      "replies": [
+                        {
+                          "id": "1674e637-9677-416d-7783-0eaf8b0df702",
+                          "text": "This is scotty's reply at level 4 (edited)",
+                          "author": "scotty",
+                          "replies": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "7cc8d566-02c2-36a3-ffd0-08e4d4890d95",
+                      "text": "This is scotty's reply at level 3",
+                      "author": "scotty",
+                      "replies": []
+                    }
+                  ]
+                },
+                {
+                  "id": "808c1912-d9b6-54e5-bfcf-1cee64705a97",
+                  "text": "This is the second reply at level 2",
+                  "author": "mohanram",
+                  "replies": []
+                },
+                {
+                  "id": "8d4420c8-c1bf-9708-52fa-a468792cef6d",
+                  "text": "This is scotty's first reply",
+                  "author": "scotty",
+                  "replies": []
+                }
+              ]
             }
           ]
         },
         {
-          "id": "b5ecb985-b884-7306-156e-e68880490d8b",
-          "text": "This is scotty's edited comments. Yes they are",
-          "author": "scotty",
-          "replies": []
-        },
-        {
-          "id": "6d245d7b-3392-b19b-7962-7a13fb9b7edc",
-          "text": "This is some comment from the same user",
+          "id": "2a1e03be-5af8-65b2-17c5-72327f122629",
+          "text": "This is a new comment",
           "author": "scotty",
           "replies": []
         }
